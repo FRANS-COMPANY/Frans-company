@@ -26,6 +26,11 @@
       margin-bottom: 10px;
     }
 
+    h1 {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
     nav {
       background: #002d5a;
       text-align: center;
@@ -52,7 +57,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    h1, h2 {
+    h2 {
       color: #004080;
     }
 
@@ -75,29 +80,6 @@
       font-size: 16px;
     }
 
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background: #004080;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background: #0066cc;
-    }
-
     footer {
       text-align: center;
       padding: 15px;
@@ -106,10 +88,22 @@
       margin-top: 40px;
     }
 
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
     @media (max-width: 600px) {
       nav a {
         display: block;
         margin: 10px 0;
+      }
+
+      iframe {
+        height: 1000px;
       }
     }
   </style>
@@ -133,14 +127,16 @@
   <main>
     <section id="apropos">
       <h2>À propos de nous</h2>
-      <p>FRANS COMPANY est une entreprise qui met en valeur les talents et les potentiels dans plusieurs domaines comme les langues, la motivation, le digital, le management, et les services d’assistance en ligne.</p>
+      <p>
+        FRANS COMPANY est une entreprise qui valorise les talents et les potentiels dans plusieurs domaines comme les langues, la motivation, le digital, le management, et les services d’assistance en ligne.
+      </p>
     </section>
 
     <section id="services">
       <h2>Nos Services</h2>
       <ul>
         <li>✅ Cours de langues (Français, Anglais, Swahili, Lingala)</li>
-        <li>✅ Coaching Motivationnel et développement personnel</li>
+        <li>✅ Coaching motivationnel et développement personnel</li>
         <li>✅ Services numériques et informatiques</li>
         <li>✅ Assistant en ligne pour particuliers et entreprises</li>
         <li>✅ Management des petites entreprises</li>
@@ -154,7 +150,7 @@
       <a class="whatsapp-button" href="https://wa.me/243999047524" target="_blank">Nous contacter sur WhatsApp</a>
 
       <h3>Ou remplissez ce formulaire :</h3>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?embedded=true">Chargement…</iframe>
     </section>
   </main>
 
