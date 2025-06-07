@@ -2,29 +2,33 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nos Formations – FRANS COMPANY</title>
-  <link rel="icon" href="logo.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Détails des Formations – FRANS COMPANY</title>
+  <link rel="icon" href="logo.png" type="image/png" />
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f2f2f2;
+      background: #f2f2f2;
       color: #333;
     }
 
     header {
-      background-color: #004080;
+      background: #004080;
       color: white;
       padding: 20px;
       text-align: center;
     }
 
+    header img {
+      height: 60px;
+    }
+
     nav {
-      background-color: #003366;
+      background: #002d5a;
       text-align: center;
-      padding: 10px 0;
+      padding: 10px;
     }
 
     nav a {
@@ -39,12 +43,12 @@
     }
 
     main {
-      padding: 20px;
       max-width: 1000px;
-      margin: auto;
+      margin: 30px auto;
       background: white;
+      padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     h1, h2 {
@@ -55,40 +59,18 @@
       margin-bottom: 40px;
     }
 
-    .toc {
-      background: #e6f0ff;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 30px;
+    ul {
+      padding-left: 20px;
     }
 
-    .toc a {
-      text-decoration: none;
-      color: #004080;
-      display: block;
-      margin: 5px 0;
-    }
-
-    .toc a:hover {
-      text-decoration: underline;
-    }
-
-    .whatsapp-button {
+    .back-link {
       display: inline-block;
-      margin-top: 10px;
-      padding: 12px 20px;
-      background-color: #25D366;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #004080;
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .back-home {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      color: #004080;
     }
 
     footer {
@@ -98,118 +80,82 @@
       color: white;
       margin-top: 40px;
     }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Nos Formations</h1>
-    <p>Développez vos compétences avec <strong>FRANS COMPANY</strong></p>
+    <img src="logo.png" alt="Logo FRANS COMPANY" />
+    <h1>Détails de nos Formations</h1>
   </header>
 
   <nav>
     <a href="index.html">Accueil</a>
     <a href="#langues">Langues</a>
     <a href="#motivation">Motivation</a>
-    <a href="#numerique">Numérique</a>
-    <a href="#assistance">Assistant</a>
-    <a href="#management">Management</a>
-    <a href="#pro">Formations pratiques</a>
+    <a href="#digital">Digital</a>
+    <a href="#assistant">Assistant en ligne</a>
+    <a href="#entreprise">Management</a>
   </nav>
 
   <main>
-
-    <div class="toc">
-      <h2>📘 Table des matières</h2>
-      <a href="#langues">1. Langues</a>
-      <a href="#motivation">2. Motivation & Développement personnel</a>
-      <a href="#numerique">3. Services numériques</a>
-      <a href="#assistance">4. Assistant en ligne</a>
-      <a href="#management">5. Management des petites entreprises</a>
-      <a href="#pro">6. Formations pratiques</a>
-    </div>
-
     <section id="langues">
-      <h2>1. Langues</h2>
-      <p>Apprenez à communiquer avec aisance dans :</p>
+      <h2>📚 Cours de Langues</h2>
+      <p>Nous offrons des cours pratiques et interactifs en :</p>
       <ul>
-        <li>📘 Français</li>
-        <li>🗣️ Anglais</li>
-        <li>🌍 Swahili</li>
-        <li>🇨🇩 Lingala</li>
+        <li>Français – Débutant à avancé</li>
+        <li>Anglais – Conversationnel, académique, business</li>
+        <li>Swahili – Langue régionale et professionnelle</li>
+        <li>Lingala – Langue locale pour une meilleure intégration</li>
       </ul>
-      <p>Cours pour débutants, intermédiaires et avancés. Méthodes interactives et pratiques.</p>
     </section>
 
     <section id="motivation">
-      <h2>2. Motivation & Développement personnel</h2>
-      <p>Boostez votre mental et atteignez vos objectifs :</p>
+      <h2>🔥 Coaching Motivationnel</h2>
+      <p>Formations en développement personnel :</p>
       <ul>
-        <li>🌟 Confiance en soi</li>
-        <li>🎯 Objectifs de vie</li>
-        <li>💼 Leadership et attitude positive</li>
+        <li>Gestion du temps et des priorités</li>
+        <li>Leadership et confiance en soi</li>
+        <li>Planification d’objectifs et succès</li>
       </ul>
     </section>
 
-    <section id="numerique">
-      <h2>3. Services numériques</h2>
-      <p>Formations pratiques pour réussir dans le monde digital :</p>
+    <section id="digital">
+      <h2>💻 Services Numériques & Informatique</h2>
+      <p>Acquérez des compétences numériques utiles :</p>
       <ul>
-        <li>💻 Informatique de base & bureautique (Word, Excel, etc.)</li>
-        <li>📱 Réseaux sociaux et communication digitale</li>
-        <li>🖼️ Création de contenus visuels</li>
-        <li>🌐 Création de sites Web simples</li>
+        <li>Informatique de base (Word, Excel, Internet)</li>
+        <li>Création de contenu (Canva, YouTube, réseaux sociaux)</li>
+        <li>Marketing digital et gestion de pages</li>
       </ul>
     </section>
 
-    <section id="assistance">
-      <h2>4. Assistant en ligne</h2>
-      <p>Devenez un professionnel de l’assistance à distance :</p>
+    <section id="assistant">
+      <h2>🤝 Services d’Assistance en Ligne</h2>
+      <p>Apprenez à travailler comme assistant virtuel :</p>
       <ul>
-        <li>📧 Gestion des emails</li>
-        <li>📅 Organisation des tâches</li>
-        <li>🛠️ Utilisation d’outils en ligne (Google, Trello, etc.)</li>
+        <li>Communication professionnelle</li>
+        <li>Gestion de tâches, d’e-mails et d’agendas</li>
+        <li>Utilisation d’outils numériques (Google Docs, Trello, etc.)</li>
       </ul>
     </section>
 
-    <section id="management">
-      <h2>5. Management des petites entreprises</h2>
-      <p>Apprenez à organiser, gérer et faire croître votre micro-entreprise :</p>
+    <section id="entreprise">
+      <h2>📈 Management des Petites Entreprises</h2>
+      <p>Devenez entrepreneur ou gestionnaire :</p>
       <ul>
-        <li>📊 Gestion de base et budget</li>
-        <li>📈 Planification d’activités</li>
-        <li>💡 Développement de projet</li>
+        <li>Création et gestion d’une petite entreprise</li>
+        <li>Comptabilité de base et plan d’affaires</li>
+        <li>Recherche de marché et marketing local</li>
       </ul>
     </section>
 
-    <section id="pro">
-      <h2>6. Formations pratiques</h2>
-      <p>Formations de terrain pour l’autonomie et l’emploi local :</p>
-      <ul>
-        <li>🌱 Agriculture & élevage</li>
-        <li>✂️ Couture</li>
-        <li>🔧 Mécanique moto</li>
-        <li>🔌 Électricité solaire</li>
-        <li>🪵 Menuiserie</li>
-      </ul>
-    </section>
-
-    <a class="whatsapp-button" href="https://wa.me/243999047524" target="_blank">📲 S’inscrire via WhatsApp</a>
-    <br/>
-    <a class="back-home" href="index.html">← Retour à l'accueil</a>
-
+    <a class="back-link" href="index.html">← Retour à l'accueil</a>
   </main>
 
   <footer>
-    &copy; 2025 FRANS COMPANY – Tous droits réservés
+    &copy; 2025 FRANS COMPANY | Tous droits réservés
   </footer>
 
 </body>
-                                                                                               </html>
+</html>
