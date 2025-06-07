@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Détails des Formations – FRANS COMPANY</title>
+  <title>Formations – FRANS COMPANY</title>
   <link rel="icon" href="logo.png" type="image/png" />
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
-      color: #333;
     }
 
     header {
@@ -23,54 +23,34 @@
 
     header img {
       height: 60px;
-    }
-
-    nav {
-      background: #002d5a;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+      margin-bottom: 10px;
     }
 
     main {
       max-width: 1000px;
-      margin: 30px auto;
+      margin: auto;
+      padding: 20px;
       background: white;
-      padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    h1, h2 {
+    h1 {
       color: #004080;
+      margin-bottom: 30px;
     }
 
-    section {
+    .formation {
       margin-bottom: 40px;
     }
 
-    ul {
-      padding-left: 20px;
+    .formation h2 {
+      color: #002d5a;
+      margin-bottom: 10px;
     }
 
-    .back-link {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #004080;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
+    .formation p {
+      line-height: 1.6;
     }
 
     footer {
@@ -80,77 +60,64 @@
       color: white;
       margin-top: 40px;
     }
+
+    a.button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    a.button:hover {
+      background-color: #0066cc;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <img src="logo.png" alt="Logo FRANS COMPANY" />
-    <h1>Détails de nos Formations</h1>
+    <h1>Nos Formations Professionnelles</h1>
+    <p>Développez vos compétences avec nos formations ciblées</p>
   </header>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="#langues">Langues</a>
-    <a href="#motivation">Motivation</a>
-    <a href="#digital">Digital</a>
-    <a href="#assistant">Assistant en ligne</a>
-    <a href="#entreprise">Management</a>
-  </nav>
-
   <main>
-    <section id="langues">
-      <h2>📚 Cours de Langues</h2>
-      <p>Nous offrons des cours pratiques et interactifs en :</p>
-      <ul>
-        <li>Français – Débutant à avancé</li>
-        <li>Anglais – Conversationnel, académique, business</li>
-        <li>Swahili – Langue régionale et professionnelle</li>
-        <li>Lingala – Langue locale pour une meilleure intégration</li>
-      </ul>
-    </section>
 
-    <section id="motivation">
-      <h2>🔥 Coaching Motivationnel</h2>
-      <p>Formations en développement personnel :</p>
-      <ul>
-        <li>Gestion du temps et des priorités</li>
-        <li>Leadership et confiance en soi</li>
-        <li>Planification d’objectifs et succès</li>
-      </ul>
-    </section>
+    <div class="formation">
+      <h2>1. Cours de Langues</h2>
+      <p>Apprenez à parler et écrire couramment le français, l’anglais, le swahili ou le lingala avec nos formateurs expérimentés. Cours adaptés à tous les niveaux.</p>
+    </div>
 
-    <section id="digital">
-      <h2>💻 Services Numériques & Informatique</h2>
-      <p>Acquérez des compétences numériques utiles :</p>
-      <ul>
-        <li>Informatique de base (Word, Excel, Internet)</li>
-        <li>Création de contenu (Canva, YouTube, réseaux sociaux)</li>
-        <li>Marketing digital et gestion de pages</li>
-      </ul>
-    </section>
+    <div class="formation">
+      <h2>2. Coaching Motivationnel</h2>
+      <p>Reprenez confiance en vous, découvrez vos talents et libérez votre potentiel grâce à nos sessions de motivation, leadership et développement personnel.</p>
+    </div>
 
-    <section id="assistant">
-      <h2>🤝 Services d’Assistance en Ligne</h2>
-      <p>Apprenez à travailler comme assistant virtuel :</p>
-      <ul>
-        <li>Communication professionnelle</li>
-        <li>Gestion de tâches, d’e-mails et d’agendas</li>
-        <li>Utilisation d’outils numériques (Google Docs, Trello, etc.)</li>
-      </ul>
-    </section>
+    <div class="formation">
+      <h2>3. Informatique de Base</h2>
+      <p>Maîtrisez les compétences numériques essentielles : Windows, Internet, email, traitement de texte (Word), tableur (Excel), et présentation (PowerPoint).</p>
+    </div>
 
-    <section id="entreprise">
-      <h2>📈 Management des Petites Entreprises</h2>
-      <p>Devenez entrepreneur ou gestionnaire :</p>
-      <ul>
-        <li>Création et gestion d’une petite entreprise</li>
-        <li>Comptabilité de base et plan d’affaires</li>
-        <li>Recherche de marché et marketing local</li>
-      </ul>
-    </section>
+    <div class="formation">
+      <h2>4. Bureautique & Services en ligne</h2>
+      <p>Apprenez à créer des CV professionnels, remplir des formulaires en ligne, faire des recherches efficaces et offrir des services administratifs numériques.</p>
+    </div>
 
-    <a class="back-link" href="index.html">← Retour à l'accueil</a>
+    <div class="formation">
+      <h2>5. Création de Contenu Digital</h2>
+      <p>Formation à la conception d’images, vidéos, publications réseaux sociaux, affiches publicitaires et présentations professionnelles avec outils accessibles.</p>
+    </div>
+
+    <div class="formation">
+      <h2>6. Compétences Entrepreneuriales</h2>
+      <p>Initiez-vous à la gestion de microentreprises : planification, marketing local, ventes, gestion de la clientèle, finances de base et esprit d'entreprise.</p>
+    </div>
+
+    <a href="index.html" class="button">← Retour à l'accueil</a>
+
   </main>
 
   <footer>
