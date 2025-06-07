@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FRANS COMPANY</title>
-  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="icon" href="logo.png" type="image/png">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -75,12 +75,27 @@
       font-size: 16px;
     }
 
-    iframe {
+    form input, form textarea {
       width: 100%;
-      height: 900px;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #004080;
+      color: white;
+      padding: 10px 20px;
       border: none;
-      border-radius: 10px;
-      margin-top: 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #0066cc;
     }
 
     footer {
@@ -96,17 +111,13 @@
         display: block;
         margin: 10px 0;
       }
-
-      iframe {
-        height: 1200px;
-      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Logo FRANS COMPANY" />
+    <img src="logo.png" alt="Logo FRANS COMPANY">
     <h1>FRANS COMPANY</h1>
     <p>Libère ton potentiel – Transforme ta vie</p>
   </header>
@@ -116,6 +127,7 @@
     <a href="#apropos">À propos</a>
     <a href="#services">Services</a>
     <a href="#formations">Formations</a>
+    <a href="langues.html">Langues</a> <!-- LIEN AJOUTÉ -->
     <a href="#contact">Contact</a>
   </nav>
 
@@ -147,8 +159,8 @@
       <p>Pour toute demande, vous pouvez nous écrire directement :</p>
       <a class="whatsapp-button" href="https://wa.me/243999047524" target="_blank">Nous contacter sur WhatsApp</a>
 
-      <h3>Ou remplissez ce formulaire :</h3>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?embedded=true" allowfullscreen></iframe>
+      <h3>Ou envoyez un message ici :</h3>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
     </section>
   </main>
 
