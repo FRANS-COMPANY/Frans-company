@@ -75,21 +75,12 @@
       font-size: 16px;
     }
 
-    .form-button {
-      background: #004080;
-      color: white;
-      padding: 12px 20px;
+    iframe {
+      width: 100%;
+      height: 900px;
       border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
+      border-radius: 10px;
       margin-top: 20px;
-    }
-
-    .form-button:hover {
-      background: #0066cc;
     }
 
     footer {
@@ -104,6 +95,10 @@
       nav a {
         display: block;
         margin: 10px 0;
+      }
+
+      iframe {
+        height: 1200px;
       }
     }
   </style>
@@ -152,10 +147,8 @@
       <p>Pour toute demande, vous pouvez nous écrire directement :</p>
       <a class="whatsapp-button" href="https://wa.me/243999047524" target="_blank">Nous contacter sur WhatsApp</a>
 
-      <h3>Ou remplissez notre formulaire en ligne :</h3>
-      <a class="form-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?usp=dialog" target="_blank">
-        Accéder au formulaire Google
-      </a>
+      <h3>Ou remplissez ce formulaire :</h3>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?embedded=true" allowfullscreen></iframe>
     </section>
   </main>
 
