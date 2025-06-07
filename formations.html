@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Formations – FRANS COMPANY</title>
-  <link rel="icon" href="logo.png" type="image/png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formations - FRANS COMPANY</title>
+  <link rel="icon" href="logo.png" type="image/png">
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      background: #f2f2f2;
       margin: 0;
       padding: 0;
+      color: #333;
     }
 
     header {
@@ -26,6 +26,23 @@
       margin-bottom: 10px;
     }
 
+    nav {
+      background: #002d5a;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     main {
       max-width: 1000px;
       margin: auto;
@@ -37,20 +54,16 @@
 
     h1 {
       color: #004080;
-      margin-bottom: 30px;
     }
 
-    .formation {
+    section {
       margin-bottom: 40px;
     }
 
-    .formation h2 {
-      color: #002d5a;
-      margin-bottom: 10px;
-    }
-
-    .formation p {
-      line-height: 1.6;
+    .formation {
+      border-left: 5px solid #004080;
+      padding-left: 15px;
+      margin-bottom: 20px;
     }
 
     footer {
@@ -61,63 +74,53 @@
       margin-top: 40px;
     }
 
-    a.button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #004080;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    a.button:hover {
-      background-color: #0066cc;
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Logo FRANS COMPANY" />
-    <h1>Nos Formations Professionnelles</h1>
-    <p>Développez vos compétences avec nos formations ciblées</p>
+    <img src="logo.png" alt="Logo FRANS COMPANY">
+    <h1>Nos Formations</h1>
   </header>
 
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="index.html#services">Services</a>
+    <a href="formations.html">Nos Formations</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
   <main>
+    <section class="formation">
+      <h2>Langues</h2>
+      <p>Cours pratiques et intensifs de Français, Anglais, Swahili, Lingala. Objectif : autonomie orale et écrite pour la vie professionnelle, sociale ou académique.</p>
+    </section>
 
-    <div class="formation">
-      <h2>1. Cours de Langues</h2>
-      <p>Apprenez à parler et écrire couramment le français, l’anglais, le swahili ou le lingala avec nos formateurs expérimentés. Cours adaptés à tous les niveaux.</p>
-    </div>
+    <section class="formation">
+      <h2>Motivation & Développement personnel</h2>
+      <p>Coaching pour renforcer l’estime de soi, la confiance, la vision de vie, et passer à l’action dans ses projets.</p>
+    </section>
 
-    <div class="formation">
-      <h2>2. Coaching Motivationnel</h2>
-      <p>Reprenez confiance en vous, découvrez vos talents et libérez votre potentiel grâce à nos sessions de motivation, leadership et développement personnel.</p>
-    </div>
+    <section class="formation">
+      <h2>Digital & Informatique</h2>
+      <p>Initiation à l’informatique, bureautique (Word, Excel), création de contenus, réseaux sociaux, et outils numériques.</p>
+    </section>
 
-    <div class="formation">
-      <h2>3. Informatique de Base</h2>
-      <p>Maîtrisez les compétences numériques essentielles : Windows, Internet, email, traitement de texte (Word), tableur (Excel), et présentation (PowerPoint).</p>
-    </div>
+    <section class="formation">
+      <h2>Assistant en ligne</h2>
+      <p>Formation pour devenir assistant virtuel : répondre aux emails, gérer des documents, utiliser les outils Google, etc.</p>
+    </section>
 
-    <div class="formation">
-      <h2>4. Bureautique & Services en ligne</h2>
-      <p>Apprenez à créer des CV professionnels, remplir des formulaires en ligne, faire des recherches efficaces et offrir des services administratifs numériques.</p>
-    </div>
-
-    <div class="formation">
-      <h2>5. Création de Contenu Digital</h2>
-      <p>Formation à la conception d’images, vidéos, publications réseaux sociaux, affiches publicitaires et présentations professionnelles avec outils accessibles.</p>
-    </div>
-
-    <div class="formation">
-      <h2>6. Compétences Entrepreneuriales</h2>
-      <p>Initiez-vous à la gestion de microentreprises : planification, marketing local, ventes, gestion de la clientèle, finances de base et esprit d'entreprise.</p>
-    </div>
-
-    <a href="index.html" class="button">← Retour à l'accueil</a>
-
+    <section class="formation">
+      <h2>Management</h2>
+      <p>Compétences de gestion de petites entreprises, leadership, planification, organisation, et suivi de projets communautaires.</p>
+    </section>
   </main>
 
   <footer>
