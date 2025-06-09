@@ -8,10 +8,11 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f4f8fc;
       color: #333;
@@ -22,10 +23,10 @@
       top: 0;
       width: 100%;
       background-color: #002d5a;
-      padding: 10px 20px;
+      padding: 12px 20px;
       display: flex;
+      justify-content: center;
       gap: 30px;
-      align-items: center;
       z-index: 1000;
     }
 
@@ -43,25 +44,16 @@
     header {
       height: 85vh;
       background-size: cover;
-      background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-position: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: white;
       text-align: center;
-      padding: 100px 10px 30px;
+      padding: 100px 20px 40px;
+      color: white;
       transition: background-image 1s ease-in-out;
-    }
-
-    header img {
-      height: 80px;
-      margin-bottom: 10px;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 10px;
-      border-radius: 10px;
     }
 
     main {
@@ -139,12 +131,12 @@
   </style>
 
   <script>
-    // Redirection vers l'anglais si langue navigateur
+    // Redirection automatique si navigateur en anglais
     if (navigator.language.startsWith("en")) {
       window.location.href = "index-en.html";
     }
 
-    // Arrière-plans cycliques
+    // Arrière-plans tournants
     const images = ["motivation.jpg", "bleulogo.png", "management.jpg"];
     let current = 0;
 
@@ -168,7 +160,6 @@
   </nav>
 
   <header>
-    <img src="bleulogo.png" alt="Logo FRANS COMPANY" />
     <h1>FRANS COMPANY</h1>
     <p>Libère ton potentiel – Transforme ta vie</p>
   </header>
