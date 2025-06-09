@@ -16,10 +16,8 @@
 
     header {
       height: 100vh;
-      background-image: url('motivation.jpg');
       background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
+      background-position: center;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -27,20 +25,6 @@
       color: white;
       text-align: center;
       transition: background-image 1s ease-in-out;
-      position: relative;
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
-
-    header * {
-      position: relative;
-      z-index: 1;
     }
 
     header img {
@@ -50,14 +34,25 @@
 
     nav {
       background-color: #002d5a;
-      padding: 15px;
-      text-align: center;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-left a {
+      margin-right: 30px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 20px;
+      margin: 0 15px;
       font-weight: bold;
       font-size: 16px;
     }
@@ -89,6 +84,10 @@
     .hero p {
       font-size: 18px;
       margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
     }
 
     .btn-main {
@@ -140,22 +139,21 @@
   </style>
 
   <script>
-    // Redirection automatique si le navigateur est en anglais
+    // Redirection automatique vers la version anglaise si le navigateur est en anglais
     if (navigator.language.startsWith("en")) {
       window.location.href = "index-en.html";
     }
 
-    // Défilement automatique des images d’arrière-plan
+    // Défilement automatique des images de fond dans l'entête
     const images = ["motivation.jpg", "team.jpg", "franck.jpg", "bleulogo.png"];
     let current = 0;
     setInterval(() => {
-      document.querySelector("header").style.backgroundImage = `url('${images[current]}')`;
+      document.querySelector("header").style.backgroundImage = `url(${images[current]})`;
       current = (current + 1) % images.length;
     }, 5000);
   </script>
 </head>
 <body>
-
   <header>
     <img src="bleulogo.png" alt="Logo FRANS COMPANY" />
     <h1>FRANS COMPANY</h1>
@@ -163,16 +161,22 @@
   </header>
 
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="formations.html">Formations</a>
-    <a href="https://wa.me/243999047524" target="_blank">Nos formations</a>
+    <div class="nav-left">
+      <a href="index.html">Accueil</a>
+    </div>
+    <div class="nav-right">
+      <a href="formations.html">Formations</a>
+      <a href="https://wa.me/243999047524" target="_blank">Nos formations</a>
+    </div>
   </nav>
 
   <main>
     <section class="hero">
       <h2>Découvrez nos formations adaptées à la réalité africaine</h2>
       <p>
-        Chez FRANS COMPANY, nous croyons que chaque jeune africain mérite une chance réelle. Nos programmes sont conçus pour répondre aux besoins du marché local, avec une certification rapide, des sessions pratiques et un accompagnement professionnel. Vous rêvez d'un avenir meilleur ? Commencez ici.
+        Chez FRANS COMPANY, nous croyons que chaque jeune africain mérite une chance réelle.
+        Nos programmes sont conçus pour répondre aux besoins du marché local, avec une certification rapide,
+        des sessions pratiques et un accompagnement professionnel. Vous rêvez d'un avenir meilleur ? Commencez ici.
       </p>
       <a class="btn-main" href="formations.html">Voir les formations</a>
       <a class="btn-main" href="https://wa.me/243999047524" target="_blank">Nous contacter</a>
@@ -201,6 +205,5 @@
   <footer>
     &copy; 2025 FRANS COMPANY | Tous droits réservés
   </footer>
-
 </body>
 </html>
