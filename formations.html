@@ -1,160 +1,66 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nos Formations - FRANS COMPANY</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f7f9fc;
-      color: #333;
-    }
-
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #002d5a;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    h1, h2 {
-      color: #004080;
-    }
-
-    .formation {
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-      margin: 10px 5px 0 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #004080;
-      color: white;
-      margin-top: 40px;
-    }
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
+    header, footer { background: #004080; color: white; text-align: center; padding: 20px; }
+    main { padding: 20px; max-width: 1000px; margin: auto; background: white; }
+    h1 { color: #004080; text-align: center; }
+    .formation { margin-bottom: 40px; }
+    .formation img { width: 100%; max-height: 250px; object-fit: cover; border-radius: 10px; }
+    .formation h2 { color: #002d5a; }
+    .btn { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #25D366; color: white; text-decoration: none; border-radius: 5px; }
+    .download-btn { background: #004080; }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Nos Formations Professionnelles</h1>
-    <p>Développez vos compétences avec FRANS COMPANY et changez votre avenir !</p>
+    <p>Libère ton potentiel avec FRANS COMPANY</p>
   </header>
-
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="formations.html">Formations</a>
-    <a href="#inscription">Inscription gratuite</a>
-  </nav>
-
   <main>
-    <section>
-      <h2>Pourquoi choisir la compagnie FRANS ?</h2>
-      <p>Chez FRANS COMPANY, chaque formation est conçue pour vous rendre opérationnel, autonome et performant. 
-      Nos modules sont accessibles, pratiques et orientés vers les opportunités réelles de votre environnement. 
-      Vous bénéficiez d’un accompagnement régulier, d’un suivi de vos progrès, et d’une <strong>certification immédiate après la formation</strong>.</p>
-    </section>
-
     <section class="formation">
-      <h2>Langues (Français, Anglais, Swahili, Lingala)</h2>
-      <p>Apprenez à parler, lire et écrire efficacement grâce à nos cours dynamiques. Développez votre capacité à communiquer, enseigner ou travailler dans des contextes multilingues.</p>
-      <ul>
-        <li>🔸 Méthodes interactives et adaptées à tous les niveaux</li>
-        <li>🔸 Pratique orale intensive et mise en situation</li>
-        <li>🔸 Opportunités : enseignement, traduction, tourisme, commerce</li>
-      </ul>
+      <img src="langues.jpg" alt="Cours de langues" />
+      <h2>1. Cours de langues</h2>
+      <p>Apprenez le français, l’anglais, le swahili ou le lingala avec des méthodes interactives et adaptées à votre niveau. Certification immédiate après la formation.</p>
     </section>
-
     <section class="formation">
-      <h2>Motivation & Développement personnel</h2>
-      <p>Transformez votre mentalité et atteignez vos objectifs. Cette formation booste votre confiance, discipline et vision de vie.</p>
-      <ul>
-        <li>🔸 Coaching personnalisé</li>
-        <li>🔸 Développement de l’estime de soi</li>
-        <li>🔸 Opportunités : vie sociale épanouie, leadership, entrepreneuriat</li>
-      </ul>
+      <img src="motivation.jpg" alt="Coaching motivationnel" />
+      <h2>2. Coaching motivationnel</h2>
+      <p>Boostez votre estime de soi, votre confiance et votre vision avec un accompagnement personnalisé. Certification immédiate après la formation.</p>
     </section>
-
     <section class="formation">
-      <h2>Compétences numériques et informatiques</h2>
-      <p>Maîtrisez les outils de base et avancés du numérique : bureautique, navigation, création de contenu, services en ligne.</p>
-      <ul>
-        <li>🔸 Pratique sur PC ou mobile</li>
-        <li>🔸 Modules adaptés aux débutants</li>
-        <li>🔸 Opportunités : télétravail, assistance virtuelle, gestion numérique</li>
-      </ul>
+      <img src="numerique.jpg" alt="Services numériques" />
+      <h2>3. Services numériques</h2>
+      <p>Maîtrisez l’informatique de base, la bureautique, les outils web et les réseaux sociaux pour devenir un acteur du digital. Certification immédiate après la formation.</p>
     </section>
-
     <section class="formation">
-      <h2>Assistance en ligne</h2>
-      <p>Apprenez à gérer des tâches professionnelles pour des clients en ligne : rédaction, support client, communication, etc.</p>
-      <ul>
-        <li>🔸 Apprentissage à distance ou en présentiel</li>
-        <li>🔸 Simulations de missions réelles</li>
-        <li>🔸 Opportunités : télésecrétariat, aide administrative, assistance commerciale</li>
-      </ul>
+      <img src="assistance.jpg" alt="Assistance en ligne" />
+      <h2>4. Assistance en ligne</h2>
+      <p>Devenez assistant virtuel pour particuliers et entreprises : rédaction, gestion, communication, planification. Certification immédiate après la formation.</p>
     </section>
-
     <section class="formation">
-      <h2>Management des petites entreprises</h2>
-      <p>Comprenez les bases de la gestion, développez votre projet, apprenez à organiser, diriger et faire croître votre entreprise locale.</p>
-      <ul>
-        <li>🔸 Élaboration de plans simples et efficaces</li>
-        <li>🔸 Gestion des ressources et du personnel</li>
-        <li>🔸 Opportunités : entrepreneuriat, gestion coopérative, leadership local</li>
-      </ul>
+      <img src="management.jpg" alt="Management des petites entreprises" />
+      <h2>5. Management</h2>
+      <p>Apprenez à gérer efficacement une petite entreprise : gestion financière, marketing, leadership, planification. Certification immédiate après la formation.</p>
     </section>
-
-    <section class="formation" id="inscription">
-      <h2>Inscription gratuite</h2>
-      <p>Intéressé ? N’attendez plus ! Choisissez votre domaine de formation et remplissez gratuitement notre formulaire.</p>
-      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?usp=dialog" target="_blank">📋 Remplir le formulaire</a>
-      <a class="btn" href="https://wa.me/243999047524" target="_blank">📱 Contact WhatsApp</a>
+    <section class="formation">
+      <img src="entrepreneuriat.jpg" alt="Compétences entrepreneuriales" />
+      <h2>6. Compétences entrepreneuriales</h2>
+      <p>Développez vos idées d’affaires, créez et gérez un projet rentable avec un mentorat pratique. Certification immédiate après la formation.</p>
     </section>
+    <div style="text-align:center;">
+      <a class="btn download-btn" href="programme_frans_company.pdf" download>Télécharger le programme complet</a>
+      <a class="btn" href="https://wa.me/243999047524" target="_blank">Contact WhatsApp</a>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform" target="_blank">Inscription gratuite</a>
+    </div>
   </main>
-
   <footer>
     &copy; 2025 FRANS COMPANY | Tous droits réservés
   </footer>
-
 </body>
 </html>
