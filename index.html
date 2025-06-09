@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="fr">  
-<head>  
-  <meta charset="UTF-8" />  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
-  <title>FRANS COMPANY - Accueil</title>  
-  <link rel="icon" type="image/png" href="bleulogo.png" />  
-  <style>  
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRANS COMPANY - Accueil</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="bleulogo.png" />
+  <script>
+    // Redirection automatique selon la langue du navigateur
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith("en")) {
+      window.location.href = "index-en.html";
+    }
+  </script>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f8fc;
@@ -14,97 +22,57 @@
       color: #333;
     }
 
-    /* ====== HEADER DYNAMIQUE ====== */
-    .site-header {
-      height: 400px;
+    header {
       position: relative;
+      background-color: #004080;
+      color: white;
+      padding: 0;
+      text-align: center;
       overflow: hidden;
     }
 
     .header-slideshow {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
+      display: flex;
+      overflow: hidden;
+      height: 250px;
+      position: relative;
     }
 
     .header-slideshow img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      animation: slide 12s infinite;
+    }
+
+    @keyframes slide {
+      0% { margin-left: 0; }
+      33% { margin-left: -100%; }
+      66% { margin-left: -200%; }
+      100% { margin-left: 0; }
+    }
+
+    header .overlay {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      animation: slideFade 18s infinite;
-      opacity: 0;
-    }
-
-    .header-slideshow img:nth-child(1) { animation-delay: 0s; }
-    .header-slideshow img:nth-child(2) { animation-delay: 6s; }
-    .header-slideshow img:nth-child(3) { animation-delay: 12s; }
-
-    @keyframes slideFade {
-      0% { opacity: 0; }
-      10% { opacity: 1; }
-      30% { opacity: 1; }
-      40% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-
-    .header-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       z-index: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
     }
 
-    .header-content {
-      max-width: 700px;
-      padding: 20px;
+    header .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       z-index: 3;
     }
 
-    .header-content img {
+    header img.logo {
       height: 80px;
       margin-bottom: 10px;
-    }
-
-    .header-content h1 {
-      font-size: 36px;
-      margin: 10px 0;
-    }
-
-    .header-content p {
-      font-size: 18px;
-      color: #ddeeff;
-      margin-bottom: 20px;
-    }
-
-    .header-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .btn-main {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: #004080;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn-main:hover {
-      background-color: #0066cc;
     }
 
     nav {
@@ -123,6 +91,20 @@
 
     nav a:hover {
       text-decoration: underline;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 4;
+    }
+
+    .lang-switch a {
+      color: white;
+      font-weight: bold;
+      margin: 0 5px;
+      text-decoration: none;
     }
 
     main {
@@ -148,6 +130,21 @@
     .hero p {
       font-size: 18px;
       margin-bottom: 20px;
+    }
+
+    .btn-main {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      background-color: #004080;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-main:hover {
+      background-color: #0066cc;
     }
 
     .features {
@@ -184,40 +181,35 @@
   </style>
 </head>
 <body>
-
-  <!-- En-tête avec défilement -->
-  <header class="site-header">
+  <header>
     <div class="header-slideshow">
-      <img src="team.jpg" alt="Image équipe">
-      <img src="motivation.jpg" alt="Image motivation">
-      <img src="linqua.jpg" alt="Image langues">
+      <img src="motivation.jpg" alt="Motivation">
+      <img src="team.jpg" alt="Notre équipe">
+      <img src="linqua.jpg" alt="Langues">
     </div>
-    <div class="header-overlay">
-      <div class="header-content">
-        <img src="bleulogo.png" alt="Logo FRANS COMPANY" />
-        <h1>FRANS COMPANY</h1>
-        <p>Libère ton potentiel – Transforme ta vie</p>
-        <div class="header-buttons">
-          <a class="btn-main" href="formations.html">Nos formations</a>
-          <a class="btn-main" href="https://wa.me/243999047524" target="_blank">Contact WhatsApp</a>
-        </div>
-      </div>
+    <div class="overlay"></div>
+    <div class="lang-switch">
+      <a href="index.html">FR</a> | <a href="index-en.html">EN</a>
+    </div>
+    <div class="content">
+      <img src="bleulogo.png" alt="Logo FRANS COMPANY" class="logo" />
+      <h1>FRANS COMPANY</h1>
+      <p>Libère ton potentiel – Transforme ta vie</p>
     </div>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <a href="index.html">Accueil</a>
     <a href="formations.html">Formations</a>
-    <a href="https://wa.me/243999047524" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/243999047524" target="_blank">Nos formations</a>
   </nav>
 
-  <!-- Contenu principal -->
   <main>
     <section class="hero">
       <h2>Découvrez nos formations adaptées à la réalité africaine</h2>
       <p>Obtenez des compétences recherchées, une certification immédiate et un accompagnement personnalisé.</p>
       <a class="btn-main" href="formations.html">Voir les formations</a>
+      <a class="btn-main" href="formations.html">Nos formations</a>
     </section>
 
     <section class="features">
@@ -236,9 +228,8 @@
     </section>
   </main>
 
-  <!-- Pied de page -->
   <footer>
     &copy; 2025 FRANS COMPANY | Tous droits réservés
   </footer>
 </body>
-  </html>
+</html>
