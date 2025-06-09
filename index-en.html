@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRANS COMPANY - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="bleulogo.png" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
+    header {
+      position: relative;
+      background-color: #004080;
+      color: white;
+      padding: 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .header-slideshow {
+      display: flex;
+      overflow: hidden;
+      height: 250px;
+      position: relative;
+    }
+
+    .header-slideshow img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      animation: slide 12s infinite;
+    }
+
+    @keyframes slide {
+      0% { margin-left: 0; }
+      33% { margin-left: -100%; }
+      66% { margin-left: -200%; }
+      100% { margin-left: 0; }
+    }
+
+    header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+
+    header .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+    }
+
+    header img.logo {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #002d5a;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .lang-switch {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 4;
+    }
+
+    .lang-switch a {
+      color: white;
+      font-weight: bold;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .hero {
+      background-color: #e0edff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .hero h2 {
+      color: #004080;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn-main {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      background-color: #004080;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-main:hover {
+      background-color: #0066cc;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .feature h3 {
+      color: #004080;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 15px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-slideshow">
+      <img src="motivation.jpg" alt="Motivation">
+      <img src="team.jpg" alt="Our team">
+      <img src="linqua.jpg" alt="Languages">
+    </div>
+    <div class="overlay"></div>
+    <div class="lang-switch">
+      <a href="index.html">FR</a> | <a href="index-en.html">EN</a>
+    </div>
+    <div class="content">
+      <img src="bleulogo.png" alt="FRANS COMPANY Logo" class="logo" />
+      <h1>FRANS COMPANY</h1>
+      <p>Unleash your potential – Transform your life</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index-en.html">Home</a>
+    <a href="formations.html">Trainings</a>
+    <a href="https://wa.me/243999047524" target="_blank">Our Trainings</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h2>Discover our training programs tailored to the African context</h2>
+      <p>Gain in-demand skills, receive instant certification, and benefit from personal coaching.</p>
+      <a class="btn-main" href="formations.html">View Trainings</a>
+      <a class="btn-main" href="formations.html">Our Trainings</a>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>✔ Instant Certification</h3>
+        <p>Receive a certificate as soon as you complete the course, recognized by our local partners.</p>
+      </div>
+      <div class="feature">
+        <h3>✔ Ongoing Support</h3>
+        <p>Personal follow-up even after training, ensuring real-world application of your skills.</p>
+      </div>
+      <div class="feature">
+        <h3>✔ 100% Practical</h3>
+        <p>Hands-on trainings focused on jobs, entrepreneurship, and digital services.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 FRANS COMPANY | All rights reserved
+  </footer>
+</body>
+  </html>
