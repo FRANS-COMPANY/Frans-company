@@ -1,91 +1,201 @@
-<!-- ... (le reste du code inchangé jusqu'à <main>) -->
+<!DOCTYPE html>
+<html lang="fr">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>FRANS COMPANY - Accueil</title>  
+  <link rel="stylesheet" href="style.css" />  
+  <link rel="icon" type="image/png" href="logo.png.png" />  
+  <style>  
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-<main>
-  <section class="hero">
-    <h2>Découvrez nos formations adaptées à la réalité africaine</h2>
-    <p>Obtenez des compétences recherchées, une certification immédiate et un accompagnement personnalisé.</p>
-    <a class="btn-main" href="formations.html">Voir les formations</a>
-    <a class="btn-main" href="https://wa.me/243999047524" target="_blank">Discuter sur WhatsApp</a>
-  </section>
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-  <section class="features">
-    <div class="feature">
-      <h3>✔ Certification immédiate</h3>
-      <p>Recevez un certificat dès la fin de votre formation, reconnu par nos partenaires locaux.</p>
-    </div>
-    <div class="feature">
-      <h3>✔ Accompagnement constant</h3>
-      <p>Suivi personnalisé, même après la formation, pour garantir la mise en pratique réelle.</p>
-    </div>
-    <div class="feature">
-      <h3>✔ 100% pratique</h3>
-      <p>Des formations concrètes, orientées vers l’emploi, l’entrepreneuriat ou les services numériques.</p>
-    </div>
-  </section>
+    header img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
 
-  <!-- Nouvelle fiche de formation exemple -->
-  <section style="margin-top: 50px;">
-    <div style="background-color: white; border-radius: 10px; padding: 20px; box-shadow: 0 0 8px rgba(0,0,0,0.1);">
-      <h2 style="color: #004080;">Formation en Sécurité</h2>
-      <img src="https://via.placeholder.com/800x400?text=Image+Formation+Sécurité" alt="Image sécurité" style="width: 100%; border-radius: 10px; margin: 15px 0;" />
-      <ul style="list-style: none; padding-left: 0; line-height: 1.6;">
-        <li><strong>📍 Objectif :</strong> Acquérir les compétences pour assurer efficacement la sécurité des personnes et des biens dans divers environnements.</li>
-        <li><strong>🧠 Contenu :</strong> Surveillance, premiers secours, droit de la sécurité, gestion des conflits, communication professionnelle.</li>
-        <li><strong>👷 Débouchés :</strong> Agent de sécurité, garde du corps, vigile, superviseur de site, entrepreneur en sécurité privée.</li>
-        <li><strong>⌛ Durée :</strong> 3 mois (cours pratiques et théoriques) avec stage en entreprise ou organisation.</li>
-        <li><strong>📌 Conditions :</strong> Être motivé, avoir au moins 18 ans, savoir lire et écrire. Pas de diplôme exigé.</li>
-      </ul>
+    nav {
+      background-color: #002d5a;
+      padding: 15px;
+      text-align: center;
+    }
 
-      <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px;">
-        <a href="details-securite.html" class="btn-main" style="background-color: #1a73e8;">En savoir plus</a>
-        <a href="https://wa.me/243999047524" class="btn-main" style="background-color: #25D366;">WhatsApp</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?usp=dialog" class="btn-main" style="background-color: #ff6f00;" target="_blank">Inscription</a>
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .hero {
+      background-color: #e0edff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .hero h2 {
+      color: #004080;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn-main {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      background-color: #004080;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-main:hover {
+      background-color: #0066cc;
+    }
+
+    /* Carousel styles */
+    .carousel {
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      max-width: 100%;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+
+    .carousel-track {
+      display: flex;
+      width: 400%;
+      animation: scroll 16s linear infinite;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0%); }
+      25% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .feature h3 {
+      color: #004080;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 15px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>  
+</head>  
+<body>  
+  <header>  
+    <img src="logo.png.png" alt="Logo FRANS COMPANY" />  
+    <h1>FRANS COMPANY</h1>  
+    <p>Libère ton potentiel – Transforme ta vie</p>  
+  </header>
+
+  <nav>  
+    <a href="index.html">Accueil</a>  
+    <a href="formations.html">Formations</a>  
+    <a href="formations.html">À savoir plus</a>  
+  </nav>
+
+  <main>  
+    <section class="hero">  
+      <h2>Découvrez nos formations adaptées à la réalité africaine</h2>  
+      <p>Obtenez des compétences recherchées, une certification immédiate et un accompagnement personnalisé.</p>  
+      <a class="btn-main" href="formations.html">Voir les formations</a>  
+      <a class="btn-main" href="https://wa.me/243999047524" target="_blank">Discuter sur WhatsApp</a>  
+    </section>
+
+    <!-- Carousel Section -->
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="carousel.jpg" alt="Image 1">
+        <img src="bleulogo.png" alt="Image 2">
+        <img src="motivation.jpg" alt="Image 3">
+        <img src="linqua.jpg" alt="Image 4">
       </div>
     </div>
-  </section>
-</main><!-- ... (le reste du code inchangé jusqu'à <main>) -->
 
-<main>
-  <section class="hero">
-    <h2>Découvrez nos formations adaptées à la réalité africaine</h2>
-    <p>Obtenez des compétences recherchées, une certification immédiate et un accompagnement personnalisé.</p>
-    <a class="btn-main" href="formations.html">Voir les formations</a>
-    <a class="btn-main" href="https://wa.me/243999047524" target="_blank">Discuter sur WhatsApp</a>
-  </section>
+    <section class="features">  
+      <div class="feature">  
+        <h3>✔ Certification immédiate</h3>  
+        <p>Recevez un certificat dès la fin de votre formation, reconnu par nos partenaires locaux.</p>  
+      </div>  
+      <div class="feature">  
+        <h3>✔ Accompagnement constant</h3>  
+        <p>Suivi personnalisé, même après la formation, pour garantir la mise en pratique réelle.</p>  
+      </div>  
+      <div class="feature">  
+        <h3>✔ 100% pratique</h3>  
+        <p>Des formations concrètes, orientées vers l’emploi, l’entrepreneuriat ou les services numériques.</p>  
+      </div>  
+    </section>
+  </main>
 
-  <section class="features">
-    <div class="feature">
-      <h3>✔ Certification immédiate</h3>
-      <p>Recevez un certificat dès la fin de votre formation, reconnu par nos partenaires locaux.</p>
-    </div>
-    <div class="feature">
-      <h3>✔ Accompagnement constant</h3>
-      <p>Suivi personnalisé, même après la formation, pour garantir la mise en pratique réelle.</p>
-    </div>
-    <div class="feature">
-      <h3>✔ 100% pratique</h3>
-      <p>Des formations concrètes, orientées vers l’emploi, l’entrepreneuriat ou les services numériques.</p>
-    </div>
-  </section>
-
-  <!-- Nouvelle fiche de formation exemple -->
-  <section style="margin-top: 50px;">
-    <div style="background-color: white; border-radius: 10px; padding: 20px; box-shadow: 0 0 8px rgba(0,0,0,0.1);">
-      <h2 style="color: #004080;">Formation en Sécurité</h2>
-      <img src="https://via.placeholder.com/800x400?text=Image+Formation+Sécurité" alt="Image sécurité" style="width: 100%; border-radius: 10px; margin: 15px 0;" />
-      <ul style="list-style: none; padding-left: 0; line-height: 1.6;">
-        <li><strong>📍 Objectif :</strong> Acquérir les compétences pour assurer efficacement la sécurité des personnes et des biens dans divers environnements.</li>
-        <li><strong>🧠 Contenu :</strong> Surveillance, premiers secours, droit de la sécurité, gestion des conflits, communication professionnelle.</li>
-        <li><strong>👷 Débouchés :</strong> Agent de sécurité, garde du corps, vigile, superviseur de site, entrepreneur en sécurité privée.</li>
-        <li><strong>⌛ Durée :</strong> 3 mois (cours pratiques et théoriques) avec stage en entreprise ou organisation.</li>
-        <li><strong>📌 Conditions :</strong> Être motivé, avoir au moins 18 ans, savoir lire et écrire. Pas de diplôme exigé.</li>
-      </ul>
-
-      <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px;">
-        <a href="details-securite.html" class="btn-main" style="background-color: #1a73e8;">En savoir plus</a>
-        <a href="https://wa.me/243999047524" class="btn-main" style="background-color: #25D366;">WhatsApp</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?usp=dialog" class="btn-main" style="background-color: #ff6f00;" target="_blank">Inscription</a>
-      </div>
-    </div>
-  </section>
-</main>
+  <footer>  
+    &copy; 2025 FRANS COMPANY | Tous droits réservés  
+  </footer>  
+</body>  
+</html>
