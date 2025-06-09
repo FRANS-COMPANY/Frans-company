@@ -41,17 +41,18 @@
     }
 
     header {
-      height: 90vh;
+      height: 85vh;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       color: white;
       text-align: center;
-      padding: 80px 10px 20px;
+      padding: 100px 10px 30px;
       transition: background-image 1s ease-in-out;
     }
 
@@ -64,7 +65,7 @@
     }
 
     main {
-      max-width: 1100px;
+      max-width: 1050px;
       margin: 20px auto;
       padding: 10px 15px;
     }
@@ -138,11 +139,13 @@
   </style>
 
   <script>
+    // Redirection vers l'anglais si langue navigateur
     if (navigator.language.startsWith("en")) {
       window.location.href = "index-en.html";
     }
 
-    const images = ["team.jpg", "bleulogo.png"];
+    // Arrière-plans cycliques
+    const images = ["motivation.jpg", "bleulogo.png", "management.jpg"];
     let current = 0;
 
     function changeBackground() {
