@@ -17,6 +17,7 @@
 
     header {
       height: 85vh;
+      background-image: url('logos.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -27,7 +28,6 @@
       color: white;
       text-align: center;
       padding-bottom: 20px;
-      transition: background-image 1s ease-in-out;
     }
 
     header h1 {
@@ -139,21 +139,6 @@
       margin-top: 40px;
     }
   </style>
-
-  <script>
-    const images = ["team.jpg", "franck.jpg", "bleulogo.png"];
-    let current = 0;
-    function changeBackground() {
-      const header = document.querySelector("header");
-      header.style.backgroundImage = `url('${images[current]}')`;
-      current = (current + 1) % images.length;
-    }
-
-    window.onload = () => {
-      changeBackground();
-      setInterval(changeBackground, 6000);
-    };
-  </script>
 </head>
 <body>
   <header>
@@ -205,4 +190,4 @@
     &copy; 2025 FRANS COMPANY | Tous droits réservés
   </footer>
 </body>
-  </html>
+</html>
