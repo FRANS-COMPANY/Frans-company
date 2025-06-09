@@ -8,25 +8,25 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f8fc;
       margin: 0;
       padding: 0;
       color: #333;
-      background-color: #f4f8fc;
     }
 
     header {
-      height: 80vh;
-      background-size: contain;
-      background-repeat: no-repeat;
+      height: 90vh;
+      background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
       color: white;
-      margin: 0;
+      text-align: center;
       transition: background-image 1s ease-in-out;
+      padding-top: 100px;
     }
 
     header img {
@@ -38,15 +38,15 @@
     }
 
     nav {
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 1000;
+      width: 100%;
       background-color: #002d5a;
-      padding: 15px 30px;
+      padding: 15px 20px;
       display: flex;
       justify-content: flex-start;
       gap: 40px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 999;
     }
 
     nav a {
@@ -67,17 +67,15 @@
     }
 
     .hero {
-      background-image: url('transition.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #002d5a;
-      padding: 40px;
+      background-color: #e0edff;
+      padding: 30px;
       border-radius: 10px;
-      margin-top: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 40px;
     }
 
     .hero h2 {
+      color: #004080;
       font-size: 28px;
       margin-bottom: 15px;
     }
@@ -86,9 +84,6 @@
       font-size: 18px;
       margin-bottom: 20px;
       text-align: justify;
-      background-color: rgba(255,255,255,0.7);
-      padding: 15px;
-      border-radius: 8px;
     }
 
     .btn-main {
@@ -138,20 +133,23 @@
       margin-top: 40px;
     }
   </style>
+
   <script>
-    // Redirection automatique selon la langue
+    // Redirection automatique si navigateur en anglais
     if (navigator.language.startsWith("en")) {
       window.location.href = "index-en.html";
     }
 
-    // Changement automatique d'images dans le header
-    const images = ["motivation.jpg", "team.jpg", "franck.jpg", "bleulogo.png"];
+    // Défilement automatique des images en arrière-plan
+    const images = ["team.jpg", "bleulogo.png", "franck.jpg", "motivation.jpg"];
     let current = 0;
+
     function changeBackground() {
       const header = document.querySelector("header");
       header.style.backgroundImage = `url('${images[current]}')`;
       current = (current + 1) % images.length;
     }
+
     window.onload = () => {
       changeBackground();
       setInterval(changeBackground, 5000);
@@ -159,17 +157,17 @@
   </script>
 </head>
 <body>
-  <header>
-    <img src="bleulogo.png" alt="Logo FRANS COMPANY" />
-    <h1>FRANS COMPANY</h1>
-    <p>Libère ton potentiel – Transforme ta vie</p>
-  </header>
-
   <nav>
     <a href="index-fr.html">Accueil</a>
     <a href="formations.html">Formations</a>
     <a href="https://wa.me/243999047524" target="_blank">Nous contacter</a>
   </nav>
+
+  <header>
+    <img src="bleulogo.png" alt="Logo FRANS COMPANY" />
+    <h1>FRANS COMPANY</h1>
+    <p>Libère ton potentiel – Transforme ta vie</p>
+  </header>
 
   <main>
     <section class="hero">
