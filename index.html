@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FRANS COMPANY - Accueil</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="bleulogo.png" />
@@ -16,10 +16,12 @@
     }
 
     header {
-      height: 100vh;
-      background-size: contain;
+      height: 90vh;
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      background-color: #000;
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -29,25 +31,36 @@
       transition: background-image 1s ease-in-out;
     }
 
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    header * {
+      position: relative;
+      z-index: 2;
+    }
+
     header img {
       height: 80px;
       margin-bottom: 10px;
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 10px;
-      border-radius: 10px;
     }
 
     nav {
       background-color: #002d5a;
-      padding: 15px;
       display: flex;
       justify-content: flex-start;
-      gap: 40px;
+      align-items: center;
+      padding: 15px 30px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
+      margin-right: 30px;
       font-weight: bold;
       font-size: 16px;
     }
@@ -66,8 +79,8 @@
       background-color: #e0edff;
       padding: 30px;
       border-radius: 10px;
+      text-align: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 40px;
     }
 
     .hero h2 {
@@ -85,7 +98,7 @@
     .btn-main {
       display: inline-block;
       padding: 12px 20px;
-      margin: 10px 5px 0 0;
+      margin: 10px;
       background-color: #004080;
       color: white;
       border-radius: 5px;
@@ -129,9 +142,8 @@
       margin-top: 40px;
     }
   </style>
-
   <script>
-    // Redirection automatique si navigateur en anglais
+    // Redirection automatique si le navigateur est en anglais
     if (navigator.language.startsWith("en")) {
       window.location.href = "index-en.html";
     }
@@ -139,15 +151,11 @@
     // Défilement automatique des images en arrière-plan
     const images = ["motivation.jpg", "team.jpg", "franck.jpg", "bleulogo.png"];
     let current = 0;
-    function changeBackground() {
-      const header = document.querySelector("header");
-      header.style.backgroundImage = `url('${images[current]}')`;
+
+    setInterval(() => {
+      document.querySelector("header").style.backgroundImage = `url(${images[current]})`;
       current = (current + 1) % images.length;
-    }
-    window.onload = () => {
-      changeBackground();
-      setInterval(changeBackground, 5000);
-    };
+    }, 5000);
   </script>
 </head>
 <body>
@@ -158,7 +166,7 @@
   </header>
 
   <nav>
-    <a href="index-fr.html">Accueil</a>
+    <a href="index.html">Accueil</a>
     <a href="formations.html">Formations</a>
     <a href="https://wa.me/243999047524" target="_blank">Nos formations</a>
   </nav>
@@ -167,9 +175,7 @@
     <section class="hero">
       <h2>Découvrez nos formations adaptées à la réalité africaine</h2>
       <p>
-        Chez FRANS COMPANY, nous croyons que chaque jeune africain mérite une chance réelle.  
-        Nos programmes sont conçus pour répondre aux besoins du marché local, avec une certification rapide,  
-        des sessions pratiques et un accompagnement professionnel. Vous rêvez d'un avenir meilleur ? Commencez ici.
+        Chez FRANS COMPANY, nous croyons que chaque jeune africain mérite une chance réelle. Nos programmes sont conçus pour répondre aux besoins du marché local, avec une certification rapide, des sessions pratiques et un accompagnement professionnel. Vous rêvez d'un avenir meilleur ? Commencez ici.
       </p>
       <a class="btn-main" href="formations.html">Voir les formations</a>
       <a class="btn-main" href="https://wa.me/243999047524" target="_blank">Nous contacter</a>
