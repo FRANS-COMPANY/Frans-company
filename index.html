@@ -20,15 +20,15 @@
 
     header {
       height: 85vh;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center top;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 100px 20px 30px;
+      padding: 80px 20px 30px;
       color: white;
       transition: background-image 1s ease-in-out;
     }
@@ -135,13 +135,7 @@
   </style>
 
   <script>
-    // Redirection automatique si navigateur en anglais
-    if (navigator.language.startsWith("en")) {
-      window.location.href = "index-en.html";
-    }
-
-    // Arrière-plans tournants
-    const images = ["motivation.jpg", "bleulogo.png", "management.jpg"];
+    const images = ["team.jpg", "franck.jpg", "bleulogo.png"];
     let current = 0;
 
     function changeBackground() {
@@ -163,15 +157,13 @@
     <p>Libère ton potentiel – Transforme ta vie</p>
   </header>
 
-  <!-- Barre de navigation descendue en bas de l'entête -->
   <nav>
     <a href="index-fr.html">Accueil</a>
     <a href="formations.html">Formations</a>
     <a href="https://wa.me/243999047524" target="_blank">Nous contacter</a>
   </nav>
 
-  <!-- Image de transition -->
-  <img class="transition-image" src="transition.jpg.jpg" alt="Transition visuelle" />
+  <img class="transition-image" src="transition.jpg" alt="Transition visuelle" />
 
   <main>
     <section class="hero">
