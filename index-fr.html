@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="fr"><head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>FRANS COMPANY - Accueil</title>  
+  <link rel="icon" type="image/png" href="bleulogo.png" />  
+  <style>  
+    body {  
+      font-family: Arial, sans-serif;  
+      background-color: #f4f8fc;  
+      margin: 0;  
+      padding: 0;  
+      color: #333;  
+    }header {  
+  background-size: cover;  
+  background-position: center;  
+  color: white;  
+  padding: 80px 20px 40px;  
+  text-align: center;  
+  position: relative;  
+  transition: background-image 1s ease-in-out;  
+}header::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 0; }  
+  
+header * { position: relative; z-index: 1; }  
+  
+header img { height: 80px; margin-bottom: 10px; }  
+  
+header h1 { font-size: 36px; margin: 10px 0 5px; font-weight: bold; }  
+  
+header p { margin: 5px 0; font-size: 18px; font-style: italic; }  
+  
+nav { background-color: #002d5a; display: flex; justify-content: center; gap: 30px; padding: 15px 0; flex-wrap: wrap; }  
+  
+nav a { color: white; text-decoration: none; font-weight: bold; font-size: 16px; }  
+  
+nav a:hover { text-decoration: underline; }  
+  
+main { max-width: 1000px; margin: auto; padding: 30px 20px; }  
+  
+.carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; scroll-behavior: smooth; border-radius: 10px; background-color: #ffffff; }  
+  
+.carousel::-webkit-scrollbar { display: none; }  
+  
+.carousel img { scroll-snap-align: center; width: 100%; height: 300px; object-fit: contain; flex-shrink: 0; }  
+  
+.hero { background-color: #e0edff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.1); }  
+  
+.hero h2 { color: #004080; font-size: 28px; margin-bottom: 15px; }  
+  
+.hero p { font-size: 18px; margin-bottom: 20px; }  
+  
+.btn-main { display: inline-block; padding: 12px 20px; margin: 10px; background-color: #004080; color: white; border-radius: 5px; text-decoration: none; font-weight: bold; }  
+  
+.btn-main:hover { background-color: #0066cc; }  
+  
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }  
+  
+.feature { background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }  
+  
+.feature h3 { color: #004080; font-size: 20px; margin-bottom: 10px; }  
+  
+.feature p { font-size: 15px; }  
+  
+footer { background-color: #004080; color: white; text-align: center; padding: 20px; margin-top: 40px; }  
+  
+  </style>  
+  <script>  
+    // Redirection basée sur la langue du navigateur  
+    const lang = navigator.language || navigator.userLanguage;  
+    if (lang.startsWith('fr')) {  
+      window.location.href = 'index.html';  
+    }// Diaporama de fond pour l'en-tête  
+const bgImages = ["motivation.jpg", "team.jpg", "franck.jpg"];  
+let current = 0;  
+function rotateBackground() {  
+  const header = document.querySelector("header");  
+  header.style.backgroundImage = `url(${bgImages[current]})`;  
+  current = (current + 1) % bgImages.length;  
+}  
+document.addEventListener("DOMContentLoaded", () => {  
+  rotateBackground();  
+  setInterval(rotateBackground, 5000);  
+});  </script>  
+</head>  
+<body>  
+  <header>  
+    <img src="bleulogo.png" alt="Logo FRANS COMPANY" />  
+    <h1>FRANS COMPANY</h1>  
+    <p>Libérez votre potentiel – Transformez votre vie</p>  
+  </header>  
+  <nav>  
+    <a href="index-en.html">Accueil</a>  
+    <a href="formations.html">Formations</a>  
+    <a href="https://wa.me/243999047524" target="_blank">Contact via WhatsApp</a>  
+    <a href="index.html">English</a>  
+  </nav>  
+  <main>  
+    <div class="carousel">  
+      <img src="team.jpg" alt="Équipe">  
+      <img src="motivation.jpg" alt="Motivation">  
+      <img src="linqua.jpg" alt="Langues">  
+      <img src="franck.jpg" alt="Franck">  
+    </div>
+    <section class="hero">  
+      <h2>Découvrez une formation pratique adaptée aux réalités africaines</h2>  
+      <p>Nous vous dotons de compétences réelles pour bâtir une carrière durable ou lancer votre propre entreprise. Chaque formation est conçue avec soin et adaptée aux besoins locaux.</p>  
+      <a class="btn-main" href="formations.html">Nos Formations</a>  
+    </section>
+    <section class="features">  
+      <div class="feature">  
+        <h3>✔ Certification Instantanée</h3>  
+        <p>Obtenez votre certification immédiatement après avoir terminé votre formation – utile pour les emplois et la reconnaissance par les partenaires.</p>  
+      </div>  
+      <div class="feature">  
+        <h3>✔ Mentorat Continu</h3>  
+        <p>Nous sommes avec vous au-delà de la salle de classe. Notre équipe vous aide à appliquer ce que vous avez appris dans la vie réelle.</p>  
+      </div>  
+      <div class="feature">  
+        <h3>✔ Approche Pratique</h3>  
+        <p>Pas de surcharge théorique – nos formations sont 100 % pratiques et axées sur les défis et les opportunités réels.</p>  
+      </div>  
+      <div class="feature">  
+        <h3>✔ Soutien Communautaire</h3>  
+        <p>Rejoignez un réseau dynamique d'apprenants et d'entrepreneurs engagés dans le progrès et l'innovation.</p>  
+      </div>  
+      <div class="feature">  
+        <h3>✔ Tarification Adaptée</h3>  
+        <p>Des formations abordables avec des options de paiement flexibles pour rendre la formation de qualité accessible à tous.</p>  
+      </div>  
+    </section>  
+  </main>  
+  <footer>  
+    &copy; 2025 FRANS COMPANY | Tous droits réservés  
+  </footer>  
+</body>  
+  </html>
