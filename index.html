@@ -1,100 +1,144 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FRANS COMPANY</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-}
+      font-family: Arial, sans-serif;
+    }
 
-header {
-  height: 80vh;
-  background-image: url('logos.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0;
-  position: relative;
-}
+    header {
+      background-image: url('logos.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px 20px;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
 
-header h1 {
-  font-size: 40px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 8px 20px;
-  border-radius: 10px;
-  margin: 0;
-}
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
 
-header p {
-  font-size: 18px;
-  margin-top: 10px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px 12px;
-  border-radius: 8px;
-}
+    header p {
+      font-size: 18px;
+      margin: 5px 0 15px;
+    }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: #002f4b;
-  padding: 12px 0;
-  position: relative;
-  top: -10px;
-}
+    nav {
+      background-color: #002f4b;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
 
-nav a {
-  color: #f0f0f0;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.transition-image {
-  width: 100%;
-  display: block;
-}
+    .transition-image {
+      width: 100%;
+      height: auto;
+    }
 
-section {
-  padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
+    .content {
+      padding: 20px;
+    }
 
-footer {
-  background-color: #002f4b;
-  color: white;
-  text-align: center;
-  padding: 12px 0;
-}
+    .attraction {
+      background-image: url("management.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
 
+    .attraction .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .attraction h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .attraction p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .btn-main {
+      display: inline-block;
+      background-color: #ffc107;
+      color: black;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>FRANS COMPANY</h1>
     <p>Libère ton potentiel – Transforme ta vie</p>
-  </header>  <img src="transition.jpg.jpg" alt="Transition" class="transition-image">  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#formations">Formations</a>
-    <a href="#contact">Nous contacter</a>
-  </nav>  <section>
-    <h2>Découvrez nos formations</h2>
-    <p>Des programmes pratiques pour maîtriser les langues, le management, la bureautique, le numérique et bien plus encore. Rejoignez FRANS COMPANY et bâtissez votre avenir dès aujourd’hui.</p>
-  </section>  <footer>
-    &copy; 2025 FRANS COMPANY. Tous droits réservés.
-  </footer>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="formations.html">Formations</a>
+    <a href="contact.html">Nous contacter</a>
+  </nav>
+
+  <img class="transition-image" src="transition.jpg.jpg" alt="Transition">
+
+  <section class="content">
+    <h2>Découvrez nos formations adaptées à vos ambitions</h2>
+    <p>Explorez un programme varié, pratique et accessible qui vous permet d’apprendre à votre rythme.</p>
+  </section>
+
+  <section class="attraction">
+    <div class="overlay">
+      <h2>Vous méritez plus qu’un rêve…</h2>
+      <p>
+        Chez <strong>FRANS COMPANY</strong>, nous croyons fermement que chaque individu a un talent unique prêt à être révélé.  
+        Que vous soyez passionné(e) par l’entrepreneuriat, le numérique, les langues ou les métiers techniques,  
+        il existe une voie adaptée à votre potentiel.
+      </p>
+      <p>
+        Nos formations sont conçues pour transformer vos ambitions en actions concrètes.  
+        Grâce à une approche pratique, à l’écoute des réalités africaines, vous serez prêt(e) à entreprendre,  
+        trouver un emploi ou même créer votre propre opportunité.
+      </p>
+      <p>
+        Ne laissez pas passer cette chance. Rejoignez une communauté de jeunes dynamiques  
+        qui ont décidé de changer leur vie grâce à la connaissance, le travail et la vision.
+      </p>
+      <a class="btn-main" href="formations.html">Je découvre les formations</a>
+      <a class="btn-main" href="https://wa.me/243999047524" target="_blank">Discuter maintenant</a>
+    </div>
+  </section>
+
 </body>
 </html>
