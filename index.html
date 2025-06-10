@@ -1,204 +1,100 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FRANS COMPANY - Accueil</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="bleulogo.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRANS COMPANY</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f8fc;
+    * {
       margin: 0;
       padding: 0;
-      color: #333;
-    }
+      box-sizing: border-box;
+    }body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
 
-    header {
-      height: 80vh;
-      background-image: url('logos.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: top center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      text-align: center;
-      padding-top: 40px;
-    }
+header {
+  height: 80vh;
+  background-image: url('logos.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  position: relative;
+}
 
-    header h1 {
-      font-size: 42px;
-      margin: 20px 0 10px;
-      color: #004080;
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 5px 15px;
-      border-radius: 10px;
-    }
+header h1 {
+  font-size: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin: 0;
+}
 
-    header p {
-      font-size: 20px;
-      margin: 0;
-      background-color: rgba(255, 255, 255, 0.6);
-      padding: 5px 10px;
-      border-radius: 8px;
-      color: #002d5a;
-    }
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 12px;
+  border-radius: 8px;
+}
 
-    nav {
-      background-color: #002d5a;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: -10px;
-    }
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #002f4b;
+  padding: 12px 0;
+  position: relative;
+  top: -10px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.transition-image {
+  width: 100%;
+  display: block;
+}
 
-    .transition-image {
-      width: 100%;
-      max-height: 220px;
-      object-fit: cover;
-      display: block;
-      margin-bottom: -10px;
-    }
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px 10px;
-    }
+footer {
+  background-color: #002f4b;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+}
 
-    .hero {
-      background-color: #e0edff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 10px;
-    }
-
-    .hero h2 {
-      color: #004080;
-      font-size: 26px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 16px;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .btn-main {
-      display: inline-block;
-      padding: 10px 18px;
-      margin: 8px 5px 0 0;
-      background-color: #004080;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn-main:hover {
-      background-color: #0066cc;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .feature {
-      background-color: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-
-    .feature h3 {
-      color: #004080;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .feature p {
-      font-size: 15px;
-    }
-
-    footer {
-      background-color: #004080;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>FRANS COMPANY</h1>
     <p>Libère ton potentiel – Transforme ta vie</p>
-  </header>
-
-  <nav>
-    <a href="index-fr.html">Accueil</a>
-    <a href="formations.html">Formations</a>
-    <a href="https://wa.me/243999047524" target="_blank">Nous contacter</a>
-  </nav>
-
-  <img class="transition-image" src="transition.jpg.jpg" alt="Transition visuelle" />
-
-  <main>
-    <section class="hero">
-      <h2>Découvrez nos formations adaptées à la réalité africaine</h2>
-      <p>
-        Chez FRANS COMPANY, nous croyons que chaque jeune africain mérite une chance réelle.  
-        Nos programmes sont conçus pour répondre aux besoins du marché local, avec une certification rapide,  
-        des sessions pratiques et un accompagnement professionnel. Vous rêvez d'un avenir meilleur ? Commencez ici.
-      </p>
-      <a class="btn-main" href="formations.html">Voir les formations</a>
-      <a class="btn-main" href="https://wa.me/243999047524" target="_blank">Nous contacter</a>
-    </section>
-
-    <section class="features">
-      <div class="feature">
-        <h3>✔ Certification immédiate</h3>
-        <p>Recevez un certificat dès la fin de votre formation, reconnu par nos partenaires locaux.</p>
-      </div>
-      <div class="feature">
-        <h3>✔ Accompagnement constant</h3>
-        <p>Suivi personnalisé, même après la formation, pour garantir la mise en pratique réelle.</p>
-      </div>
-      <div class="feature">
-        <h3>✔ 100% pratique</h3>
-        <p>Des formations concrètes, orientées vers l’emploi, l’entrepreneuriat ou les services numériques.</p>
-      </div>
-      <div class="feature">
-        <h3>✔ Pour tous</h3>
-        <p>Que vous soyez jeune diplômé, chômeur ou passionné, nos formations vous sont ouvertes.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 FRANS COMPANY | Tous droits réservés
+  </header>  <img src="transition.jpg.jpg" alt="Transition" class="transition-image">  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#formations">Formations</a>
+    <a href="#contact">Nous contacter</a>
+  </nav>  <section>
+    <h2>Découvrez nos formations</h2>
+    <p>Des programmes pratiques pour maîtriser les langues, le management, la bureautique, le numérique et bien plus encore. Rejoignez FRANS COMPANY et bâtissez votre avenir dès aujourd’hui.</p>
+  </section>  <footer>
+    &copy; 2025 FRANS COMPANY. Tous droits réservés.
   </footer>
-
 </body>
 </html>
