@@ -1,135 +1,52 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FRANS COMPANY</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome - FRANS COMPANY</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-    }
-
-    header {
-      background: linear-gradient(
-        rgba(0, 0, 0, 0.6),
-        rgba(0, 0, 0, 0.6)
-      ), url('management.jpg'), url('logoss.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 60vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 10px 20px;
-      color: white;
       text-align: center;
+      padding: 50px;
+      background-color: #f0f8ff;
+      color: #004080;
     }
-
-    header h1 {
-      font-size: 36px;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 18px;
-      margin: 5px 0 15px;
-    }
-
-    nav {
-      background-color: #002f4b;
-      color: white;
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .transition-image {
-      width: 100%;
-      height: auto;
-    }
-
-    .content {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .attraction {
-      padding: 60px 20px;
-      color: black;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .attraction h2 {
-      font-size: 32px;
+    h1 {
+      font-size: 2em;
       margin-bottom: 20px;
     }
-
-    .attraction p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .btn-main {
+    .language-links a {
       display: inline-block;
-      background-color: #ffc107;
-      color: black;
-      padding: 12px 20px;
       margin: 10px;
-      border-radius: 5px;
+      padding: 12px 20px;
+      background-color: #004080;
+      color: white;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 5px;
+    }
+    .language-links a:hover {
+      background-color: #002d5a;
     }
   </style>
+  <script>
+    // Redirection automatique selon la langue du navigateur
+    window.onload = function() {
+      const lang = navigator.language || navigator.userLanguage;
+      if (lang.startsWith('fr')) {
+        window.location.href = "index-fr.html";
+      } else {
+        window.location.href = "index-en.html";
+      }
+    };
+  </script>
 </head>
 <body>
-
-  <header>
-    <h1>FRANS COMPANY</h1>
-    <p>Libère ton potentiel – Transforme ta vie</p>
-  </header>
-
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="formations.html">Formations</a>
-    <a href="contact.html">Nous contacter</a>
-  </nav>
-
-  <img class="transition-image" src="transition.jpg.jpg" alt="Transition">
-
-  <section class="content">
-    <h2>Découvrez nos formations adaptées à vos ambitions</h2>
-    <p>Explorez un programme varié, pratique et accessible qui vous permet d’apprendre à votre rythme.</p>
-  </section>
-
-  <section class="attraction">
-    <h2>Vous méritez plus qu’un rêve…</h2>
-    <p>
-      Chez <strong>FRANS COMPANY</strong>, nous croyons fermement que chaque individu a un talent unique prêt à être révélé.  
-      Que vous soyez passionné(e) par l’entrepreneuriat, le numérique, les langues ou les métiers techniques,  
-      il existe une voie adaptée à votre potentiel.
-    </p>
-    <p>
-      Nos formations sont conçues pour transformer vos ambitions en actions concrètes.  
-      Grâce à une approche pratique, à l’écoute des réalités africaines, vous serez prêt(e) à entreprendre,  
-      trouver un emploi ou même créer votre propre opportunité.
-    </p>
-    <p>
-      Ne laissez pas passer cette chance. Rejoignez une communauté de jeunes dynamiques  
-      qui ont décidé de changer leur vie grâce à la connaissance, le travail et la vision.
-    </p>
-    <a class="btn-main" href="formations.html">Je découvre les formations</a>
-    <a class="btn-main" href="https://wa.me/243999047524" target="_blank">Discuter maintenant</a>
-  </section>
-
+  <h1>Welcome to FRANS COMPANY</h1>
+  <p>Please select your language manually if you're not redirected automatically:</p>
+  <div class="language-links">
+    <a href="index-fr.html">Français</a>
+    <a href="index-en.html">English</a>
+  </div>
 </body>
 </html>
