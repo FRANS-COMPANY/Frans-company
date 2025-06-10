@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,16 +21,31 @@
     }
     nav {
       background-color: #002d5a;
-      text-align: center;
-      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
     }
-    nav a {
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+    }
+    .nav-left a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 10px;
       font-weight: bold;
     }
-    nav a:hover {
+    .nav-left a:hover {
+      text-decoration: underline;
+    }
+    .nav-right a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .nav-right a:hover {
       text-decoration: underline;
     }
     main {
@@ -70,12 +86,18 @@
   <header>
     <h1>Nos Formations Professionnelles</h1>
     <p>Développez vos compétences, un investissement à long terme</p>
-  </header>  
+  </header>
+  
   <nav>
-    <a href="index.html">Accueil</a>
-    <a href="formations.html">Formations</a>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?usp=dialog" target="_blank">Inscription gratuite</a>
-  </nav>  
+    <div class="nav-left">
+      <a href="index.html">Accueil</a>
+    </div>
+    <div class="nav-right">
+      <a href="formations.html">Formations</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?usp=dialog" target="_blank">Inscription gratuite</a>
+    </div>
+  </nav>
+  
   <main>
     <section>
       <h2>1. Langues (Français, Anglais, Swahili, Lingala)</h2>
@@ -140,7 +162,6 @@
     <div style="text-align:center; margin-top: 30px;">
       <a class="btn-inscription" href="https://docs.google.com/forms/d/e/1FAIpQLSeXMjvETjLUCoxnBhV3FA09-42dNh2Aghk0DIeaBrPD2BBZaA/viewform?usp=dialog" target="_blank">S'inscrire maintenant</a>
       <a class="btn-whatsapp" href="https://wa.me/243999047524" target="_blank">Contacter sur WhatsApp</a>
-      
     </div>
   </main>
 
