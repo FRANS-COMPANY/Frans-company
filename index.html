@@ -2,51 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome - FRANS COMPANY</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background-color: #f0f8ff;
-      color: #004080;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .language-links a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      background-color: #004080;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .language-links a:hover {
-      background-color: #002d5a;
-    }
-  </style>
+  <title>FRANS COMPANY - Redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
-    // Redirection automatique selon la langue du navigateur
-    window.onload = function() {
+    window.addEventListener('DOMContentLoaded', () => {
       const lang = navigator.language || navigator.userLanguage;
       if (lang.startsWith('fr')) {
-        window.location.href = "index-fr.html";
+        window.location.href = 'index-fr.html';
       } else {
-        window.location.href = "index-en.html";
+        window.location.href = 'index-en.html';
       }
-    };
+    });
   </script>
 </head>
 <body>
-  <h1>Welcome to FRANS COMPANY</h1>
-  <p>Please select your language manually if you're not redirected automatically:</p>
-  <div class="language-links">
-    <a href="index-fr.html">Français</a>
-    <a href="index-en.html">English</a>
-  </div>
+  <p>Redirection en cours...</p>
 </body>
 </html>
