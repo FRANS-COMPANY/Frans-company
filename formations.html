@@ -3,17 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Redirection automatique</title>
+  <title>Professional Training - FRANS COMPANY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #004080;
+    }
+    a {
+      display: inline-block;
+      margin: 15px;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a:hover {
+      background-color: #002d5a;
+    }
+  </style>
   <script>
     const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith("fr")) {
-      window.location.href = "formations-fr.html";
-    } else {
-      window.location.href = "formations-en.html";
-    }
+
+    // Redirection automatique après 2 secondes
+    setTimeout(() => {
+      if (userLang.startsWith("fr")) {
+        window.location.href = "formations-fr.html";
+      } else {
+        window.location.href = "formations-en.html";
+      }
+    }, 2000);
   </script>
 </head>
 <body>
-  <p>Redirection en cours...</p>
+  <h1>Welcome / Bienvenue</h1>
+  <p>We are redirecting you to the appropriate language version of our trainings page.<br>
+     Nous vous redirigeons vers la version appropriée de notre page de formations.</p>
+
+  <p>If not redirected, choose your language manually below:<br>
+     Si vous n’êtes pas redirigé automatiquement, choisissez votre langue ci-dessous :</p>
+
+  <a href="formations-fr.html">🇫🇷 Version française</a>
+  <a href="formations-en.html">🇬🇧 English version</a>
 </body>
 </html>
