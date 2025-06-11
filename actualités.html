@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualités - FRANS COMPANY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #1a73e8;
+    }
+    .actu {
+      background: white;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>📢 Nos Actualités</h1>
+  <div id="news-container">
+    <p>Chargement en cours...</p>
+  </div>  <script>
+    fetch('actualites.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('news-container');
+        container.innerHTML = '';
+
+        if (data.length === 0) {
+          container.innerHTML = '<p>Aucune actualité pour le moment.</p>';
+        } else {
+          data.forEach(item => {
+            const bloc = document.createElement('div');
+            bloc.className = 'actu';
+            bloc.innerHTML = `<h3>${item.titre}</h3><p>${item.contenu}</p>` +
+              (item.fichier ? `<p><a href="${item.fichier}" target="_blank">📄 Voir le document associé</a></p>` : '');
+            container.appendChild(bloc);
+          });
+        }
+      })
+      .catch(error => {
+        document.getElementById('news-container').innerHTML = '<p>Erreur de chargement des actualités.</p>';
+      });
+  </script></body>
+</html>
