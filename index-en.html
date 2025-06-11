@@ -1,50 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
+<head>
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Basic SEO -->
-  <meta name="description" content="Practical training in Kirumba: languages, digital skills, entrepreneurship, craftsmanship. Gain concrete skills for a successful future.">
-  <meta name="keywords" content="Kirumba training, practical learning, FRANS COMPANY, vocational platform, language courses, craftsmanship, entrepreneurship">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Practical training in Kirumba in languages, digital skills, entrepreneurship and craftsmanship. Empower yourself for success with FRANS COMPANY.">
+  <meta name="keywords" content="training Kirumba, vocational training, FRANS COMPANY, language training, digital skills, entrepreneurship, Africa training, practical learning">
   <meta name="author" content="FRANS COMPANY">
+  <meta name="language" content="English">
 
   <!-- Title -->
-  <title>Vocational Training Platform in Kirumba - FRANS COMPANY</title>
+  <title>FRANS COMPANY - Professional Training in Kirumba</title>
 
-  <!-- Open Graph (social media) -->
+  <!-- Open Graph (for social sharing) -->
   <meta property="og:title" content="FRANS COMPANY - Unlock Your Potential">
-  <meta property="og:description" content="Hands-on training in languages, motivation, digital skills and more.">
+  <meta property="og:description" content="Affordable and hands-on training in Kirumba. Learn real-world skills to build your future.">
   <meta property="og:image" content="https://frans-company.github.io/Frans-company/assets/logo.png">
   <meta property="og:url" content="https://frans-company.github.io/Frans-company/">
   <meta property="og:type" content="website">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FRANS COMPANY - Vocational Training Platform">
-  <meta name="twitter:description" content="Practical courses designed to transform your future.">
+  <meta name="twitter:title" content="FRANS COMPANY - Skills for Your Future">
+  <meta name="twitter:description" content="Practical and accessible training to help you grow and succeed.">
   <meta name="twitter:image" content="https://frans-company.github.io/Frans-company/assets/logo.png">
 
-  <!-- Favicon -->
+  <!-- Favicon and stylesheet -->
   <link rel="icon" type="image/png" href="bleulogo.png">
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-  
-  <!-- Your internal styles and scripts stay the same -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px 40px;
+      text-align: center;
+      position: relative;
+      transition: background-image 1s ease-in-out;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
+    header img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: #002d5a;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 0;
+      scroll-behavior: smooth;
+      border-radius: 10px;
+      background-color: #ffffff;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel img {
+      scroll-snap-align: center;
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .hero {
+      background-color: #e0edff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .hero h2 {
+      color: #004080;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn-main {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      background-color: #004080;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-main:hover {
+      background-color: #0066cc;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .feature h3 {
+      color: #004080;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 15px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 900px;
+      border: none;
+    }
+  </style>
+
+  <script>
+    const bgImages = ["motivation.jpg", "team.jpg", "franck.jpg"];
+    let current = 0;
+    function rotateBackground() {
+      const header = document.querySelector("header");
+      header.style.backgroundImage = `url(${bgImages[current]})`;
+      current = (current + 1) % bgImages.length;
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      rotateBackground();
+      setInterval(rotateBackground, 5000);
+    });
+  </script>
 </head>
+
 <body>
   <header>
     <img src="bleulogo.png" alt="FRANS COMPANY Logo" />
     <h1>FRANS COMPANY</h1>
-    <p>Unlock Your Potential – Transform Your Life</p>
+    <p>Unlock your potential – Transform your life</p>
   </header>
 
   <nav>
-    <a href="index-en.html">Home</a>
-    <a href="formations.html">Trainings</a>
-    <a href="https://wa.me/243999047524" target="_blank">Contact via WhatsApp</a>
     <a href="index.html">Français</a>
+    <a href="index-en.html">English</a>
+    <a href="formations.html">Courses</a>
+    <a href="https://wa.me/243999047524" target="_blank">WhatsApp</a>
   </nav>
 
   <main>
@@ -52,36 +245,45 @@
       <img src="team.jpg" alt="Team">
       <img src="motivation.jpg" alt="Motivation">
       <img src="linqua.jpg" alt="Languages">
-      <img src="franck.jpg" alt="Franck">
+      <img src="franck.jpg" alt="Trainer">
     </div>
 
     <section class="hero">
-      <h2>Discover Practical Training Tailored to African Realities</h2>
-      <p>We equip you with real skills to build a sustainable career or launch your own business. Each course is carefully designed to meet local needs.</p>
-      <a class="btn-main" href="formations.html">Explore Our Trainings</a>
+      <h2>Discover practical training tailored to African realities</h2>
+      <p>We equip you with real-world skills to build a sustainable career or start your business. Our training programs are designed to meet local needs.</p>
+      <a class="btn-main" href="formations.html">See Our Courses</a>
     </section>
 
     <section class="features">
       <div class="feature">
-        <h3>✔ Instant Certification</h3>
-        <p>Receive your certificate immediately after completing the course – useful for employment and partnerships.</p>
+        <h3>✔ Instant Certificate</h3>
+        <p>Receive your certificate right after training – a valuable tool for employers and partners.</p>
       </div>
       <div class="feature">
         <h3>✔ Ongoing Mentorship</h3>
-        <p>We support you beyond the classroom. Our team helps you apply your knowledge in the real world.</p>
+        <p>We support you beyond the course to help bring your project to life.</p>
       </div>
       <div class="feature">
-        <h3>✔ Hands-on Approach</h3>
-        <p>No theoretical overload – our trainings are 100% practical, addressing real challenges and opportunities.</p>
+        <h3>✔ 100% Practical</h3>
+        <p>No useless theory – every session is hands-on and based on real-life projects.</p>
       </div>
       <div class="feature">
-        <h3>✔ Community Support</h3>
-        <p>Join a dynamic network of learners and entrepreneurs dedicated to progress and innovation.</p>
+        <h3>✔ Supportive Community</h3>
+        <p>Join a network of learners and doers ready to grow and collaborate.</p>
       </div>
       <div class="feature">
-        <h3>✔ Accessible Admissions</h3>
-        <p>Affordable courses with flexible payment options to make quality training available to all.</p>
+        <h3>✔ Affordable Options</h3>
+        <p>Low fees with flexible payment plans to match your financial situation.</p>
       </div>
+    </section>
+
+    <section class="contact">
+      <h2>📋 Register or Request More Info</h2>
+      <!-- Embed your form here -->
+      <iframe src="https://docs.google.com/forms/d/e/YOUR-FORM-LINK/viewform?embedded=true">Loading…</iframe>
+      <p style="text-align: center;">
+        <a class="btn-whatsapp" href="https://wa.me/243999047524" target="_blank">📲 Chat with us on WhatsApp</a>
+      </p>
     </section>
   </main>
 
