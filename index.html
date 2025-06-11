@@ -1,111 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Redirection automatique selon la langue du navigateur -->
-  <script>
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith('en')) {
-      window.location.href = "index-en.html";
-    }
-  </script>
-
-  <!-- Métadonnées de base -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="Formations professionnelles pratiques à Kirumba en langues, numérique, entrepreneuriat et artisanat. Développez vos compétences pour réussir.">
-  <meta name="keywords" content="formation Kirumba, apprentissage pratique, FRANS COMPANY, plateforme professionnelle, langues, numérique, artisanat, entrepreneuriat, formation RDC">
-  <meta name="author" content="FRANS COMPANY">
-  <meta name="language" content="French">
-
-  <!-- Titre -->
-  <title>FRANS COMPANY - Compagnie de Formation à Kirumba</title>
-
-  <!-- Open Graph pour réseaux sociaux -->
-  <meta property="og:title" content="FRANS COMPANY - Libérez votre potentiel">
-  <meta property="og:description" content="Formations pratiques et accessibles à Kirumba pour construire votre avenir.">
-  <meta property="og:image" content="https://frans-company.github.io/Frans-company/assets/logo.png">
-  <meta property="og:url" content="https://frans-company.github.io/Frans-company/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FRANS COMPANY - Plateforme de formation à Kirumba">
-  <meta name="twitter:description" content="Des formations concrètes pour vous aider à entreprendre et évoluer.">
-  <meta name="twitter:image" content="https://frans-company.github.io/Frans-company/assets/logo.png">
-
-  <!-- Favicon et style -->
-  <link rel="icon" type="image/png" href="bleulogo.png">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRANS COMPANY</title>
 
   <style>
-  header {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 300px;
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  padding: 20px;
-  }
-    /* ... styles inchangés ... */
-  </style>
-
-  <script>
-    const bgImages = ["motivation.jpg", "team.jpg", "franck.jpg"];
-    let current = 0;
-    function rotateBackground() {
-      const header = document.querySelector("header");
-      header.style.backgroundImage = `url(${bgImages[current]})`;
-      current = (current + 1) % bgImages.length;
+    header {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 300px;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      padding: 20px;
     }
-    document.addEventListener("DOMContentLoaded", () => {
-      rotateBackground();
-      setInterval(rotateBackground, 5000);
-    });
-  </script>
-</head>
 
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .carousel img {
+      width: 300px;
+      height: auto;
+      flex-shrink: 0;
+      border-radius: 10px;
+    }
+
+    .btn-main, .btn-whatsapp {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-main:hover, .btn-whatsapp:hover {
+      background-color: #0066cc;
+    }
+  </style>
+</head>
 <body>
-  <header>
-    <img src="bleulogo.png" alt="Logo FRANS COMPANY" />
-    <h1>FRANS COMPANY</h1>
-    <p>Libérez votre potentiel – Transformez votre vie</p>
+
+  <header style="background-image: url('images/header-bg.jpg');">
+    <h1>Bienvenue chez FRANS COMPANY</h1>
+    <p>Nous vous dotons de compétences concrètes pour bâtir une carrière durable ou créer votre entreprise. Nos formations sont conçues pour répondre aux besoins locaux.</p>
+    <a class="btn-main" href="formations.html">Nos Formations</a>
   </header>
 
-  <nav>
-    <a href="index.html">Français</a>
-    <a href="index-en.html">English</a>
-    <a href="formations.html">Formations</a>
-    <a href="https://wa.me/243999047524" target="_blank">WhatsApp</a>
-  </nav>
-
   <main>
-    <div class="carousel">
-      <img src="team.jpg" alt="Équipe">
-      <img src="motivation.jpg" alt="Motivation">
-      <img src="linqua.jpg" alt="Langues">
-      <img src="franck.jpg" alt="Formateur">
-    </div>
-
-    <section id="actualites" class="hero">
-      <h2>📰 Actualités et Mises à Jour</h2>
-      <button onclick="chargerActualites()" style="margin: 15px auto; display: block; padding: 10px 20px; background-color: #004080; color: white; border: none; border-radius: 5px; font-weight: bold;">🔄 Actualiser les actualités</button>
-      <div id="actu-container">
-        <p>Chargement des actualités...</p>
-      </div>
-    </section>
-
-    <section class="hero">
-      <h2>Découvrez une formation pratique adaptée aux réalités africaines</h2>
-      <p>Nous vous dotons de compétences concrètes pour bâtir une carrière durable ou créer votre entreprise. Nos formations sont conçues pour répondre aux besoins locaux.</p>
-      <a class="btn-main" href="formations.html">Nos Formations</a>
-    </section>
-
     <section class="features">
       <!-- ... contenu inchangé ... -->
     </section>
@@ -113,9 +72,17 @@
     <section class="contact">
       <h2>📋 Vous avez un rêve, une passion ou un projet que vous portez dans votre cœur ?</h2>
       Ne laissez pas le doute ou le manque de moyens freiner votre élan...
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfn-zrarw9BvU0SzRG-RAiqp3k7t5JsXPYFfdaF4MiqD5pQqA/viewform?usp=dialog">Chargement…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfn-zrarw9BvU0SzRG-RAiqp3k7t5JsXPYFfdaF4MiqD5pQqA/viewform?usp=dialog" width="100%" height="600" style="border:none;">Chargement…</iframe>
       <p style="text-align: center;">
         <a class="btn-whatsapp" href="https://wa.me/243999047524" target="_blank">📲 Contactez-nous sur WhatsApp</a>
+      </p>
+    </section>
+
+    <section class="actualites">
+      <h2>📰 Actualités</h2>
+      <div id="actu-container">Chargement des actualités...</div>
+      <p style="text-align: center;">
+        <button onclick="chargerActualites()" class="btn-main">🔄 Actualiser les actualités</button>
       </p>
     </section>
   </main>
@@ -151,5 +118,6 @@
 
     document.addEventListener("DOMContentLoaded", chargerActualites);
   </script>
+
 </body>
-  </html>
+</html>
