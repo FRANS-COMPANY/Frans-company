@@ -1,0 +1,22 @@
+[
+  {
+    "titre": "✅ Lancement officiel de FRANS COMPANY",
+    "contenu": "Notre plateforme est désormais en ligne pour proposer des formations pratiques à Kirumba. Explorez nos domaines : langues, numérique, entrepreneuriat, et plus.",
+    "fichier": ""
+  },
+  {
+    "titre": "📅 Inscriptions ouvertes pour juillet",
+    "contenu": "Les jeunes de Kirumba peuvent déjà s’inscrire pour les sessions de formation prévues en juillet 2025. Places limitées, réservez vite !",
+    "fichier": "docs/planning-juillet.pdf"
+  },
+  {
+    "titre": "🎥 Témoignage d’un participant",
+    "contenu": "Découvrez le témoignage de Grâce, jeune entrepreneure formée à la gestion de petite entreprise par FRANS COMPANY.",
+    "fichier": "videos/temoignage-grace.mp4"
+  },
+  {
+    "titre": "📸 Galerie photo de la dernière session",
+    "contenu": "Quelques souvenirs en image de notre formation en électricité solaire.",
+    "fichier": "images/galerie-solaire.zip"
+  }
+]
