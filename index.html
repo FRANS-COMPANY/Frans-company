@@ -241,10 +241,15 @@
       <img src="franck.jpg" alt="Formateur">  
     </div>  
 <section id="actualites" class="hero">  
-  <h2>📰 Actualités et Mises à Jour</h2>  
-  <button onclick="chargerActualites()" style="margin: 15px auto; display: block; padding: 10px 20px; background-color: #004080; color: white; border: none; border-radius: 5px; font-weight: bold;">🔄 Actualiser les actualités</button>
-  <div id="actu-container">  
-    <p>Chargement des actualités...</p>  
+    <section>
+  <h2>Gagnez dès aujourd'hui</h2>
+  <ul>
+    <li><a href="ressources.html">📘 Téléchargez nos ressources gratuites</a></li>
+    <li><a href="services.html">🛠️ Nos services</a></li>
+    <li><a href="gagner-en-ligne.html">💸 Gagner de l'argent en ligne</a></li>
+  </ul>
+    </section>
+  
   </div>  
 </section>  <section class="hero">  
   <h2>Découvrez une formation pratique adaptée aux réalités africaines</h2>  
@@ -262,7 +267,7 @@
     <p>Nous vous accompagnons après la formation pour vous aider à concrétiser vos projets.</p>  
   </div>  
   <div class="feature">  
-    <h3>✔ 100 % Pratique</h3>  
+    <h3>✔ formation basée uniquement sur la Pratique</h3>  
     <p>Pas de bla-bla inutile – chaque session est axée sur des cas réels et des projets concrets.</p>  
   </div>  
   <div class="feature">  
@@ -274,14 +279,6 @@
     <p>Des prix abordables avec des plans de paiement flexibles, adaptés à votre réalité.</p>  
   </div>  
 </section>  
-    <section>
-  <h2>Gagnez dès aujourd'hui</h2>
-  <ul>
-    <li><a href="ressources.html">📘 Téléchargez nos ressources gratuites</a></li>
-    <li><a href="services.html">🛠️ Nos services</a></li>
-    <li><a href="gagner-en-ligne.html">💸 Gagner de l'argent en ligne</a></li>
-  </ul>
-</section>
 
 <section class="contact">  
   <h2>📋 Vous avez un rêve, une passion ou un projet que vous portez dans votre cœur ?</h2>
@@ -295,7 +292,47 @@ Chaque grand changement commence par un petit pas… Ce formulaire est peut-êtr
 <a class="btn-whatsapp" href="https://wa.me/243999047524" target="_blank">📲 Contactez-nous sur WhatsApp</a>
 </p>
 </section>
+<section id="actualites" style="padding: 20px; background-color: #f8f8f8;">
+  <h2 style="text-align: center;">📰 Actualités récentes</h2>
+  <div id="contenu-actus"></div>
+</section>
 
+<script>
+function estEncoreValide(dateActu, joursValides = 30) {
+  const aujourdHui = new Date();
+  const dateAComparer = new Date(dateActu);
+  const diffTemps = aujourdHui - dateAComparer;
+  const diffJours = diffTemps / (1000 * 60 * 60 * 24);
+  return diffJours <= joursValides;
+}
+
+fetch('actualites.json')
+  .then(response => response.json())
+  .then(data => {
+    const zoneActus = document.getElementById('contenu-actus');
+    const actusFiltrees = data.filter(actu => estEncoreValide(actu.date));
+
+    if (actusFiltrees.length === 0) {
+      zoneActus.innerHTML = "<p style='text-align:center;'>Aucune actualité récente.</p>";
+    } else {
+      actusFiltrees.forEach(actu => {
+        const bloc = document.createElement('div');
+        bloc.style = "margin: 20px auto; padding: 15px; max-width: 600px; background: white; border-left: 5px solid #007bff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 8px;";
+        bloc.innerHTML = `
+          <h3 style="margin-bottom: 5px;">${actu.titre}</h3>
+          <small style="color: #666;">Publié le ${actu.date}</small>
+          <p style="margin-top: 10px;">${actu.contenu}</p>
+        `;
+        zoneActus.appendChild(bloc);
+      });
+    }
+  })
+  .catch(error => {
+    document.getElementById('contenu-actus').innerHTML = "<p style='color:red;'>Erreur de chargement des actualités.</p>";
+    console.error("Erreur lors du chargement des actualités :", error);
+  });
+</script>
+    
   </main>    <footer>  
     &copy; 2025 FRANS COMPANY | Tous droits réservés  
   </footer>  
