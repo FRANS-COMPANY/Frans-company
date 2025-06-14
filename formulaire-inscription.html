@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription – Frans Company</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Formulaire d'inscription</h1>
+    <p>Rejoignez notre réseau pour recevoir nos opportunités gratuites.</p>
+  </header>
 
+  <section>
+    <form action="https://formsubmit.co/fsiwatula@gmail.com" method="POST">
+      <label for="nom">Nom complet :</label><br>
+      <input type="text" id="nom" name="nom" required><br><br>
+
+      <label for="email">Adresse e-mail :</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="whatsapp">Numéro WhatsApp :</label><br>
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="+243..." required><br><br>
+
+      <label for="interets">Quels sont vos intérêts ?</label><br>
+      <textarea id="interets" name="interets" rows="4" placeholder="Ex. Gagner de l'argent, formations, freelance..."></textarea><br><br>
+
+      <!-- Redirection après soumission -->
+      <input type="hidden" name="_next" value="https://frans-company.github.io/Frans-company/merci.html">
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Frans Company. Tous droits réservés.</p>
+    <p>Franckson K. SIWATELL</p>
+  </footer>
+</body>
+</html>
